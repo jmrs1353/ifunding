@@ -1,8 +1,8 @@
 // assets
-import { IconDashboard } from '@tabler/icons-react';
+import { IconDashboard, IconBuildingFactory2  } from '@tabler/icons-react';
 
 // constant
-const icons = { IconDashboard };
+const icons = { IconDashboard, IconBuildingFactory2  };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -16,7 +16,7 @@ const dashboard = {
       title: 'Detalle',
       type: 'item',
       url: '/dashboard/Broker',
-      icon: icons.IconDashboard,
+      icon: icons.IconBuildingFactory2,
       breadcrumbs: false
     }
   ]

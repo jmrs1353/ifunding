@@ -1,15 +1,21 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import jsconfigPaths from 'vite-jsconfig-paths';
+import fs from 'fs';
+import path from 'path';
 
 export default defineConfig(({ mode }) => {
   // depending on your application, base can also be "/"
   const env = loadEnv(mode, process.cwd(), '');
   const API_URL = `${env.VITE_APP_BASE_NAME}`;
-  const PORT = 443;
+  const PORT = 8080;
 
   return {
     server: {
+      https: {
+        key: fs.readFileSync(path.resolve(__dirname, 'localhost-key.pem')),
+         cert: fs.readFileSync(path.resolve(__dirname, 'localhost.pem')),
+      },
       // this ensures that the browser opens upon server start
       open: true,
       // this sets a default port to 3000

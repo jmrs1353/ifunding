@@ -1,14 +1,14 @@
-import { RouterProvider } from 'react-router-dom';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
 // routing
 import router from 'routes';
-
 // project imports
+
 import NavigationScroll from 'layout/NavigationScroll';
 
 import ThemeCustomization from 'themes';
 
-// auth provider
+import LoginPage from 'views/pages/authentication/Login';
 
 // ==============================|| APP ||============================== //
 
@@ -17,7 +17,7 @@ export default function App() {
     <ThemeCustomization>
       <NavigationScroll>
         <>
-          <RouterProvider router={router} />
+          <RouterProvider router ={router} />
         </>
       </NavigationScroll>
     </ThemeCustomization>

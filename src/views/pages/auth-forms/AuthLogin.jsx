@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -26,9 +26,9 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 export default function AuthLogin() {
   const theme = useTheme();
-
+  const [message, setMessage] = useState(null)
   const [checked, setChecked] = useState(true);
-
+  const navigate = useNavigate(); 
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -36,6 +36,11 @@ export default function AuthLogin() {
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
+  };
+
+    const triggerClick = () => {
+    alert('Native Event Triggered!');
+     navigate('/dashboard/Broker'); // Navigate to the Broker dashboard
   };
 
   return (
@@ -85,7 +90,7 @@ export default function AuthLogin() {
       </Grid>
       <Box sx={{ mt: 2 }}>
         <AnimateButton>
-          <Button color="secondary" fullWidth size="large" type="submit" variant="contained">
+          <Button onClick={triggerClick} color="secondary" fullWidth size="large" type="submit" variant="contained">
             Sign In
           </Button>
         </AnimateButton>

@@ -1,9 +1,8 @@
 // assets
-import { IconKey } from '@tabler/icons-react';
-
+import { IconKey , IconCreditCard, IconFriends, IconUserPlus  } from '@tabler/icons-react';
 // constant
 const icons = {
-  IconKey
+  IconKey, IconCreditCard,IconFriends ,IconUserPlus 
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
@@ -16,24 +15,69 @@ const pages = {
   type: 'group',
   children: [
     {
-      id: 'authentication',
-      title: 'Agentes',
+      id: 'Agencia1',
+      title: 'Asesores',
       type: 'collapse',
-      icon: icons.IconKey,
+      icon: icons.IconCreditCard,
       children: [
         {
           id: 'login',
           title: 'Agregar',
           type: 'item',
-          url: '/pages/login',
-          target: true
+          url: '/sample-page',
+          target: false
         },
         {
           id: 'register',
           title: 'Detalle',
           type: 'item',
-          url: '/pages/register',
-          target: true
+          url: '/typography',
+          target: false
+        }
+      ]
+    },
+       {
+      id: 'Agencia2',
+      title: 'Agentes',
+      type: 'collapse',
+      icon: icons.IconFriends,
+      children: [
+        {
+          id: 'login',
+          title: 'Agregar',
+          type: 'item',
+          url: '/sample-page',
+          target: false
+        },
+        {
+          id: 'register',
+          title: 'Detalle',
+          type: 'item',
+          url: '/color',
+          target: false
+        }
+      ]
+    },
+    ,
+       {
+      id: 'Agencia3',
+      title: 'Clientes',
+      type: 'collapse',
+      icon: icons.IconUserPlus ,
+      children: [
+        {
+          id: 'login',
+          title: 'Agregar',
+          type: 'item',
+          url: '/sample-page',
+          target: false
+        },
+        {
+          id: 'register',
+          title: 'Detalle',
+          type: 'item',
+          url: '/shadow',
+          target: false
         }
       ]
     }
