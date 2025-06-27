@@ -24,14 +24,14 @@ const pages = {
           id: 'login',
           title: 'Agregar',
           type: 'item',
-          url: '/sample-page',
+          url: '/asesoragregar',
           target: false
         },
         {
           id: 'register',
           title: 'Detalle',
           type: 'item',
-          url: '/typography',
+          url: '/asesordashboard',
           target: false
         }
       ]
@@ -53,7 +53,7 @@ const pages = {
           id: 'register',
           title: 'Detalle',
           type: 'item',
-          url: '/color',
+          url: '/agentedashboard',
           target: false
         }
       ]
@@ -76,7 +76,7 @@ const pages = {
           id: 'register',
           title: 'Detalle',
           type: 'item',
-          url: '/shadow',
+          url: '/cliente',
           target: false
         }
       ]

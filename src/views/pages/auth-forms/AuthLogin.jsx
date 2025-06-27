@@ -39,7 +39,7 @@ export default function AuthLogin() {
   };
 
     const triggerClick = () => {
-    //alert('Native Event Triggered!');
+    alert('Native Event Triggered!');
      navigate('/dashboard/Broker'); // Navigate to the Broker dashboard
   };
 

@@ -9,6 +9,7 @@ const icons = { IconDashboard, IconBuildingFactory2  };
 const dashboard = {
   id: 'dashboard',
   title: 'Broker',
+  caption: '[Nombre del Broker]',
   type: 'group',
   children: [
     {

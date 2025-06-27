@@ -5,8 +5,11 @@ import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Broker')));
-
+const DashboardBroker = Loadable(lazy(() => import('views/dashboard/Broker')));
+const DashboardAsesor = Loadable(lazy(() => import('views/dashboard/Asesor')));
+const AgregarAsesor   = Loadable(lazy(() => import('views/pages/asesor/indexAgregar')));
+const DashboardAgente = Loadable(lazy(() => import('views/dashboard/Agente')));
+const DashboardCliente = Loadable(lazy(() => import('views/dashboard/Cliente')));
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
 const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
@@ -23,20 +26,40 @@ const MainRoutes = {
   children: [
     {
       path: '/',
-      element: <DashboardDefault />
+      element: <DashboardBroker />
     },
     {
       path: 'dashboard',
       children: [
         {
           path: 'Broker',
-          element: <DashboardDefault />
+          element: <DashboardBroker />
         }
       ]
     },
     {
       path: 'typography',
       element: <UtilsTypography />
+    },
+    {
+      path: 'asesordashboard',
+      element: <DashboardAsesor />
+    },
+      {
+      path: 'asesoragregar',
+      element: <AgregarAsesor />
+    },
+    {
+      path: 'agentedashboard',
+      element: <DashboardAgente />
+    },
+        {
+      path: 'agenteagregar',
+      element: <DashboardAgente />
+    },
+    {
+      path: 'cliente',
+      element: <DashboardCliente />
     },
     {
       path: 'color',
