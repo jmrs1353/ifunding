@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   // depending on your application, base can also be "/"
   const env = loadEnv(mode, process.cwd(), '');
   const API_URL = `${env.VITE_APP_BASE_NAME}`;
-  const PORT = 8080;
+  const PORT = 443;
 
   return {
     server: {
