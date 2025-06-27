@@ -7,7 +7,7 @@ import Loadable from 'ui-component/Loadable';
 // dashboard routing
 const DashboardBroker = Loadable(lazy(() => import('views/dashboard/Broker')));
 const DashboardAsesor = Loadable(lazy(() => import('views/dashboard/Asesor')));
-const AgregarAsesor   = Loadable(lazy(() => import('views/pages/asesor/indexAgregar')));
+const AgregarAsesor   = Loadable(lazy(() => import('views/pages/asesor/IndexAgregar')));
 const DashboardAgente = Loadable(lazy(() => import('views/dashboard/Agente')));
 const DashboardCliente = Loadable(lazy(() => import('views/dashboard/Cliente')));
 // utilities routing
